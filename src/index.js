@@ -1,8 +1,10 @@
 import {createStore} from "redux";
 
 const plus = document.getElementById("Plus");
-const minus = document.getElementById("Minus")
-const num = document.querySelector("span")
+const minus = document.getElementById("Minus");
+const num = document.querySelector("span");
+
+num.innerText = 0;
 
 const countModifier = (count = 0, action ) => {
     if(action.type === "Add") {
@@ -16,7 +18,20 @@ const countModifier = (count = 0, action ) => {
 
 const countStore = createStore(countModifier);
 
-//오브젝트 형식이어야 함.
-countStore.dispatch({ type : "Add"});
+const onChange = () => {
+    num.innerText = countStore.getState();
+}
 
-console.log(countStore.getState())
+countStore.subscribe(onChange);
+
+const handlePlus = () => {
+    countStore.dispatch({type:"Add"});
+}
+
+const handleMinus = () => {
+    countStore.dispatch({type:"Minus"});
+}
+
+
+plus.addEventListener('click', handlePlus);
+minus.addEventListener('click', handleMinus);

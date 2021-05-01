@@ -19,3 +19,7 @@
 7. action은 redux에서 function을 부를 때 쓰는 두번째 parameter or argument로 reducer와 소통하기 위한 방법이다.
 
 8. dispatch를 통해 reducer에게 메세지(Object)를 전달할 수 있다. ex)store.dispatch({ key : value })
+
+9. Subscribe는 store의 변화를 감지하고 알려주는 역할
+ex)store.subscribe(function)은 변화 감지시 해당 function실행
+
