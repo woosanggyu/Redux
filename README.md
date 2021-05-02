@@ -29,3 +29,8 @@ ex)store.subscribe(function)은 변화 감지시 해당 function실행
 11. string 형태로 바로 사용하기 보다는 const variable 로 선언해서 사용하기 ->(에러 발견에 용이하다)
 
 12. Redux의 장점은 모든 데이터를 한 곳에 모아놓기 때문에 관리하기가 매우 용이하다는 점이다.
+
+
+> redux Todo List 
+
+1. 절대 mutate state 하지마라(변형시키지 마라) => 새로운 상태(오브젝트)를 생성하고 리턴한다. 기존의 상태를 변형해서 리턴한다는 생각x
