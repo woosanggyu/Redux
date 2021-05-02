@@ -34,3 +34,7 @@ ex)store.subscribe(function)은 변화 감지시 해당 function실행
 > redux Todo List 
 
 1. 절대 mutate state 하지마라(변형시키지 마라) => 새로운 상태(오브젝트)를 생성하고 리턴한다. 기존의 상태를 변형해서 리턴한다는 생각x
+
+2. reducer 안에서 date.now()를 사용하는 건 권장하지 않음. (action에서 넘겨주는 방식이 더 좋음)
+
+3. 각 함수를 최대한 작게 쪼개는 것이 좋음(기능별로 - 최적화);
