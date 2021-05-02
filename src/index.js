@@ -27,9 +27,11 @@ const reducer = (state = [], action) => {
     console.log(action);
     switch (action.type) {
         case ADD_TODO :
-            return [{text: action.text, id: action.id }, ...state ];
+            const addItemArray = [{text: action.text, id: action.id }, ...state ]
+            return addItemArray;
         case DELETE_TODO :
-            return state.filter(toDo => toDo.id !== action.id);
+            const DeleteItemArray = state.filter(toDo => toDo.id !== action.id)
+            return DeleteItemArray;
         default :
             return state;
     }
