@@ -47,3 +47,8 @@
 
 1. e.preventDefault()는 a태그, submit태그의 고유 동작(input을 전송하는 등)을 중
    지시킨다.
+
+2. Provider 는 react-redux 라이브러리에 내장되어있는, 리액트 앱에 store 를 손쉽
+   게 연동 할 수 있도록 도와주는 컴포넌트이다.
+
+3.
