@@ -51,4 +51,10 @@
 2. Provider 는 react-redux 라이브러리에 내장되어있는, 리액트 앱에 store 를 손쉽
    게 연동 할 수 있도록 도와주는 컴포넌트이다.
 
-3.
+3. connect는 mapStateToProps로 불리며, compoenet들을 store에 연결시켜준다.
+
+4. connect는 기본적으로 function 으로 2개의 argument를 가진다. -> 'state' or
+   'dispatch' 둘 중 하나를 선택가능, 나머지 한가지는 component의 Props를 가진다.
+
+5. connect는 component로 보내는 props를 추가하도록 허용해줌(반환하는 데이터를)
+   -> ex) return { sanggyu : true};
