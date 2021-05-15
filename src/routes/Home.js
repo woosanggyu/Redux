@@ -1,7 +1,8 @@
 import { React, useState } from "react";
 import { connect } from "react-redux";
+import { actionCreators } from "../store";
 
-function Home({ toDos }) {
+function Home({ toDos, addToDo }) {
 	const [text, setText] = useState("");
 
 	function onChange(e) {
@@ -11,6 +12,7 @@ function Home({ toDos }) {
 	function onSubmit(e) {
 		// e.preventDefault()는 a 태그, submit 태그의 고유 동작을 중지시킴.
 		e.preventDefault();
+		addToDo(text);
 		setText("");
 	}
 
@@ -31,5 +33,11 @@ function mapStateToProps(state) {
 	return { toDos: state };
 }
 
+function mapDispatchToProps(dispatch) {
+	return {
+		addToDo: text => dispatch(actionCreators.addToDo(text)),
+	};
+}
+
 //connect 를 통해 Home으로 보내는 props를 추가할 수 있게 연결해줌
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

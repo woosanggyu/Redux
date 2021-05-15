@@ -54,7 +54,12 @@
 3. connect는 mapStateToProps로 불리며, compoenet들을 store에 연결시켜준다.
 
 4. connect는 기본적으로 function 으로 2개의 argument를 가진다. -> 'state' or
-   'dispatch' 둘 중 하나를 선택가능, 나머지 한가지는 component의 Props를 가진다.
+   'dispatch' 둘 중 하나 선택가능.
 
-5. connect는 component로 보내는 props를 추가하도록 허용해줌(반환하는 데이터를)
+5. connect의 첫번째 인자는 store의 state를 가지고, 두번째 인자는 component의
+   Props를 가진다.
+
+6. connect는 component로 보내는 props를 추가하도록 허용해줌(반환하는 데이터를)
    -> ex) return { sanggyu : true};
+
+7. mapDispatchToProps는 store의 dispatch를 가져와 state를 변경할 수 있게 해준다.
