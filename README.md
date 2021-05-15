@@ -63,3 +63,6 @@
    -> ex) return { sanggyu : true};
 
 7. mapDispatchToProps는 store의 dispatch를 가져와 state를 변경할 수 있게 해준다.
+
+8. 다음과 같이 작성하면 object 내에서 함수 선언 -> {functionName : (argument) =>
+   todo}
