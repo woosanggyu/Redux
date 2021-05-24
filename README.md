@@ -66,3 +66,10 @@
 
 8. 다음과 같이 작성하면 object 내에서 함수 선언 -> {functionName : (argument) =>
    todo}
+
+> Redux Toolkit
+
+1. Redux를 간단하고 효율적으로 코딩하게 해주는 ToolKit
+
+2. createAction 은 action으로 값을 넘겨줌에 있어 반복 사용되는 부분들을 줄여줄수
+   있다.
