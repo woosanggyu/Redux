@@ -71,8 +71,10 @@
 
 1. Redux를 간단하고 효율적으로 코딩하게 해주는 ToolKit
 
-2. createAction 은 action으로 값을 넘겨줌에 있어 반복 사용되는 부분들을 줄여줄수
+2. createAction은 action으로 값을 넘겨줌에 있어 반복 사용되는 부분들을 줄여줄수
    있다.
 
-3. createReducer 는 switch, case를 사용하지 않게 도와준다. 또한 state를 mutate
-   할 수 있게 해준다.
+3. createReducer는 switch, case를 사용하지 않게 도와준다. 또한 state를 mutate 할
+   수 있게 해준다.
+
+4. createSlice는 reducer와 action을 모두 가지고 있다. very very awesome...
